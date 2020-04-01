@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\tools\Gestor.Tools.Contracts\Gestor.Tools.Contracts.csproj" />
+    <ProjectReference Include="..\..\tools\Gestor.Tools.Utils\Gestor.Tools.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
