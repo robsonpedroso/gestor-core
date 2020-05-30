@@ -2,31 +2,31 @@
 
 Projeto modelo para novos projetos
 
-## IntroduÁ„o
+## Introdu√ß√£o
 
-Essas instruÁıes fornecer„o uma cÛpia do projeto em execuÁ„o na sua m·quina local para fins de desenvolvimento e teste.
-Consulte implantaÁ„o para obter notas sobre como implantar o projeto em um sistema ativo.
+Essas instru√ß√µes fornecer√£o uma c√≥pia do projeto em execu√ß√£o na sua m√°quina local para fins de desenvolvimento e teste.
+Consulte implanta√ß√£o para obter notas sobre como implantar o projeto em um sistema ativo.
 
 ### Prerequisitos
 
-O que vocÍ precisa para baixar, rodar e disponibilizar.
+O que voc√™ precisa para baixar, rodar e disponibilizar.
 
 * Visual Studio com o dotnet core 3.1 instalado
 * SQL Server
 * Criar o banco de dados local ex.: **DBGestorCore**
 * Alterar a connection string para o banco - caso haja necessidade
 
-### InstalaÁ„o
+### Instala√ß√£o
 
-ApÛs a execuÁ„o do pre requisitos, segue um passo a passo de como rodar localmente.
+Ap√≥s a execu√ß√£o do pre requisitos, segue um passo a passo de como rodar localmente.
 
-Clonar o repositÛrio
+Clonar o reposit√≥rio
 
 ```
 git clone git@github.com:robsonpedroso/gestor-core.git
 ```
 
-Abra a soluÁ„o com o Visual Studio e compile.
+Abra a solu√ß√£o com o Visual Studio e compile.
 Sete o Projeto default como a API e execute (F5).
 
 
@@ -45,26 +45,26 @@ Se ele retornar ok (conforme exemplo abaixo)
     "messages": []
 }
 ```
-## DiretÛrios
+## Diret√≥rios
 
-1. `_docs` - Contem o arquivo Readme.md e caso necess·rio outras documentaÁıes para suporte a execuÁ„o e manutenÁ„o da aplicaÁ„o.
+1. `_docs` - Contem o arquivo Readme.md e caso necess√°rio outras documenta√ß√µes para suporte a execu√ß√£o e manuten√ß√£o da aplica√ß√£o.
 2. `api` - Projeto da API
-3. `core` - Estrutura padr„o do DDD contendo os projetos `Application`, `Domain` e `Infra`
-4. `tools` - Ferramentas para ajudar no desenvolvimento, no caso foi usado algumas extensions para facilitar a implementaÁ„o da API e dos retornos.
+3. `core` - Estrutura padr√£o do DDD contendo os projetos `Application`, `Domain` e `Infra`
+4. `tools` - Ferramentas para ajudar no desenvolvimento, no caso foi usado algumas extensions para facilitar a implementa√ß√£o da API e dos retornos.
 
-### Padr„o de Tecnologia utilizado
+### Padr√£o de Tecnologia utilizado
 
-Utilizamos o padr„o do DDD mais simplificado para trabalhar com os projetos.
+Utilizamos o padr√£o do DDD mais simplificado para trabalhar com os projetos.
 
-Os contratos n„o s„o utilizados no projeto de `Application` devido ser 1 por 1, caso haja algum caso que seja necess·rio fazer uma diferenciaÁ„o de aplicaÁ„o, ai sim criamos a interface para essa diferenciaÁ„o
+Os contratos n√£o s√£o utilizados no projeto de `Application` devido ser 1 por 1, caso haja algum caso que seja necess√°rio fazer uma diferencia√ß√£o de aplica√ß√£o, ai sim criamos a interface para essa diferencia√ß√£o
 
-J· no `Domain` e no `Infra` utilizamos normalmente os contratos (interfaces), pois sabemos que muitas das vezes precisamos modificar os serviÁos, seja por causa de alguma integraÁ„o ou ferramenta utilizada que foi necess·rio mudar o padr„o de conexıes e chamadas entre elas.
+J√° no `Domain` e no `Infra` utilizamos normalmente os contratos (interfaces), pois sabemos que muitas das vezes precisamos modificar os servi√ßos, seja por causa de alguma integra√ß√£o ou ferramenta utilizada que foi necess√°rio mudar o padr√£o de conex√µes e chamadas entre elas.
 
-O mapeamento das interfaces s„o feito automaticamente com reflection para evitar o trabalho e possÌveis erros de esquecimento.
-Esse reflection se encontra numa extension no projeto `tools/WebApi` e È chamado no startup da aplicaÁ„o.
-Caso seja necess·rio passar alguma interface externa ou manualmente mesmo, esse metodo aceita um action ficando mais f·cil utilizar.
+O mapeamento das interfaces s√£o feito automaticamente com reflection para evitar o trabalho e poss√≠veis erros de esquecimento.
+Esse reflection se encontra numa extension no projeto `tools/WebApi` e √© chamado no startup da aplica√ß√£o.
+Caso seja necess√°rio passar alguma interface externa ou manualmente mesmo, esse metodo aceita um action ficando mais f√°cil utilizar.
 
-Exemplo da utilizaÁ„o se encontra no Statup (veja abaixo):
+Exemplo da utiliza√ß√£o se encontra no Statup (veja abaixo):
 ```
 	services.AddServiceMappingsFromAssemblies<BaseApplication, IBaseService, InfraServices>(srv =>
     {
@@ -72,17 +72,17 @@ Exemplo da utilizaÁ„o se encontra no Statup (veja abaixo):
     });
 ```
 
-O retorno da API foi modificado atravÈs de um wrapper e filtro no startup da API.
-O padr„o de convers„o do json È `SnakeCaseNamingStrategy`.
-Para facilitar a visualizaÁ„o do json de resultado utilizei o [Json Viewer Online](http://jsonviewer.stack.hu/)
+O retorno da API foi modificado atrav√©s de um wrapper e filtro no startup da API.
+O padr√£o de convers√£o do json √© `SnakeCaseNamingStrategy`.
+Para facilitar a visualiza√ß√£o do json de resultado utilizei o [Json Viewer Online](http://jsonviewer.stack.hu/)
 
-## ExecuÁ„o dos testes
+## Execu√ß√£o dos testes
 
-N„o foi gerado
+N√£o foi gerado
 
-## PublicaÁ„o
+## Publica√ß√£o
 
-N„o foi gerado
+N√£o foi gerado
 
 ## Versionamento
 
@@ -96,6 +96,10 @@ MINOR version when you add functionality in a backwards compatible manner, and
 PATCH version when you make backwards compatible bug fixes.
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 ```
+
+## Licen√ßa
+
+[MIT](https://gist.github.com/robsonpedroso/98dc906d5896711f07a9cffbcc2776ea)
 
 ## Autores
 
